@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="AutomaticRepositoryCreator.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutomaticRepositoryCreator.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Grid.Column="1"
+            Grid.Row="1"
+            Background="#0984E3"
+            Opacity="0.5"
+            Height="470"
+            CornerRadius="15"
+            VerticalAlignment="Top"
+            Margin="20,20,0,0">
+
+                        <StackPanel>
+
+                            <Label Content="Welcome to ARC"
+                                   FontFamily="Bahnschrift SemiBold"
+                                   FontSize="32"
+                                   Margin="20,20,20,0"/>
+
+                            <TextBlock Text="Automatic Repository Creator"
+                                       FontFamily="Bahnschrift Light Condensed"
+                                       FontSize="20"
+                                       Margin="20,0,20,20"/>
+
+                            <TextBlock FontFamily="Bahnschrift Light Condensed"
+                                       FontSize="20"
+                                       Margin="20">
+                                With ARC, you can automatically create repositories for your projects.
+                                <LineBreak/>
+                                Software projects, a website, or any other type of development work, 
+                                <LineBreak/> 
+                                ARC helps you automate tedious setup process for your repository.
+                            </TextBlock>
+
+                            <TextBlock FontFamily="Bahnschrift Light Condensed"
+                                       FontSize="20"
+                                       Margin="20,0">
+                                With just a few clicks, you can create a new repository,
+                                <LineBreak/>
+                                perform the initial configuration, and even make the first commits.
+                                <LineBreak/>
+                                ARC takes care of these tasks, allowing you to
+                                <LineBreak/>
+                                focus on the actual development work.
+                            </TextBlock>
+
+                            <TextBlock FontFamily="Bahnschrift Light Condensed"
+                                       FontSize="20"
+                                       Margin="20">
+                                Get started with ARC now and experience the efficiency
+                                <LineBreak/> 
+                                and convenience automated repository creation.
+                            </TextBlock>
+
+                            <TextBlock FontFamily="Bahnschrift Light Condensed"
+                                       FontSize="20"
+                                       Margin="20,0">
+                                Enjoy your work!
+                            </TextBlock>
+                        </StackPanel>
+                    </Border>
+</UserControl>
