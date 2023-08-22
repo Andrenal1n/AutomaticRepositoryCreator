@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutomaticRepositoryCreator"
-        xmlns:viewModel="clr-namespace:AutomaticRepositoryCreator.MVVM.ViewModel"
+        xmlns:viewModel="clr-namespace:AutomaticRepositoryCreator.MVVM.ViewModel" 
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -18,11 +18,13 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border CornerRadius="30">
+    <Border CornerRadius="5"
+            BorderThickness="2"
+            BorderBrush="#dfe6e9">
         <Border.Background>
             <ImageBrush ImageSource="/Images/background.jpg"/>
         </Border.Background>
-    <Border CornerRadius="30">
+    <Border CornerRadius="5">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1.3" EndPoint="1,3" Opacity="0.95">
                     <GradientStop Color="#2d3436" Offset="0"/>
@@ -30,8 +32,8 @@
                 </LinearGradientBrush>
             </Border.Background>
 
-        <Border Margin="25,25,25,55"
-                CornerRadius="15">
+        <Border Margin="0,25,25,50"
+                CornerRadius="5">
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -47,31 +49,44 @@
                 <TextBlock Grid.Column="0"
                            Grid.Row="0"
                            Text="ARC"
-                           Foreground="#dfe6e9"
+                           Foreground="#00cec9"
                            FontSize="28"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"/>
+                           FontWeight="Bold"
+                           VerticalAlignment="center"
+                           HorizontalAlignment="Left"
+                           Margin="35,0,0,0"/>
 
                 <StackPanel Grid.Column="1"
                             Grid.Row="0"
                             Orientation="Horizontal"
-                            HorizontalAlignment="Right">
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
 
                     <Button x:Name="ButtonMinimize"
                             Cursor="Hand"
                             Command="{Binding MinimizeCommand}"
-                            Margin="0,0,25,0"
+                            Margin="0,0,15,0"
                             Style="{StaticResource WindowButtonTheme}">
+                            <Button.Content>
+                                <Image Source="\Images\minimize-icon.png" 
+                                           Width="25" 
+                                           Height="25"/>
+                            </Button.Content>
 
-                    </Button>
+                        </Button>
 
                     <Button x:Name="ButtonClose"
                             Cursor="Hand"
                             Command="{Binding CloseCommand}"
                             Margin="0,0,0,0"
                             Style="{StaticResource WindowButtonTheme}">
+                            <Button.Content>
+                                <Image Source="\Images\close-square-icon.png" 
+                                           Width="25" 
+                                           Height="25"/>
+                            </Button.Content>
 
-                    </Button>
+                        </Button>
 
                 </StackPanel>
 
@@ -83,42 +98,137 @@
 
                         <RadioButton x:Name="btnHome"
                                      Cursor="Hand"
-                                     Background="#0984E3"
+                                     FontSize="20"
+                                     Height="70"
                                      Style="{StaticResource MenuButtonTheme}"
                                      IsChecked="True"
                                      Command="{Binding HomeViewCommand}">
-                            
+                            <RadioButton.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="\Images\home-icon.png" 
+                                           Width="20" 
+                                           Height="20"
+                                           Margin="0,0,10,0"/>
+                                    <TextBlock Text="Home"/>
+                                </StackPanel>
+                            </RadioButton.Content>
                         </RadioButton>
 
                         <RadioButton x:Name="btnNewRepo"
                                      Cursor="Hand"
-                                     Background="#74B9FF"
+                                     FontSize="20"
+                                     Height="70"
                                      Style="{StaticResource MenuButtonTheme}"
                                      Command="{Binding NewRepoCommand}">
-
-                        </RadioButton>
-
-                        <RadioButton x:Name="btnChangePath"
-                                     Cursor="Hand"
-                                     Background="#6C5CE7"
-                                     Style="{StaticResource MenuButtonTheme}"
-                                     Command="{Binding ChangePathCommand}">
-
+                            <RadioButton.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="\Images\plus-square-icon.png" 
+                                           Width="20" 
+                                           Height="20"
+                                           Margin="0,0,10,0"/>
+                                    <TextBlock Text="New Project"/>
+                                </StackPanel>
+                            </RadioButton.Content>
                         </RadioButton>
 
                         <RadioButton x:Name="btnHelp"
                                      Cursor="Hand"
-                                     Background="#a29bfe"
+                                     FontSize="20"
+                                     Height="70"
                                      Style="{StaticResource MenuButtonTheme}"
                                      Command="{Binding HelpCommand}">
+                            <RadioButton.Content>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="\Images\question-mark-round-line-icon.png" 
+                                           Width="20" 
+                                           Height="20"
+                                           Margin="0,0,10,0"/>
+                                    <TextBlock Text="Help"/>
+                                </StackPanel>
+                            </RadioButton.Content>
 
                         </RadioButton>
-                    
+
+                        <Line X1="25" Y1="0" X2="175" Y2="0" 
+                              Stroke="#dfe6e9" 
+                              StrokeThickness="3"
+                              Margin="0,25,0,0"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    Width="150"
+                                    Margin="0,25,0,0">
+                            <Button x:Name="ButtonGithub" 
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Height="45"
+                                    Width="45"
+                                    Margin="20,0,0,0"
+                                    Cursor="Hand"
+                                    Command="{Binding GithubLinkCommand}"
+                                    Style="{StaticResource MediaButtonTheme}">
+                                <Button.Content>
+                                    <Image Source="\Images\github-icon.png"
+                                       Height="40"
+                                       Width="40"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                                </Button.Content>
+                                
+                            </Button>
+
+                            <Button x:Name="ButtonDiscord"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Margin="30,0,0,0"
+                                    Height="45"
+                                    Width="45"
+                                    Cursor="Hand"
+                                    Command="{Binding DiscordLinkCommand}"
+                                    Style="{StaticResource MediaButtonTheme}">
+                                <Button.Content>
+                                    <Image Source="\Images\discord-round-icon.png"
+                                       Height="40"
+                                       Width="40"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"/>
+                                </Button.Content>
+                               
+                            </Button>
+                            
+                        </StackPanel>
+
+                        <Border Background="#dfe6e9"
+                                Opacity="0.5"
+                                CornerRadius="5"
+                                Height="150"
+                                Width="150"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
+                                Margin="0,15,0,0">
+                            <StackPanel Margin="10">
+                                <TextBlock TextWrapping="Wrap"
+                                           FontSize="10">
+                                    ARC
+                                    <LineBreak/>
+                                    Version 1.0
+                                    <LineBreak/>
+                                    Copyright (C) [2023] [Andre Ehret]
+                                    <LineBreak/>
+                                    This software is licensed under the GNU General Public License (GPL).
+                                    <LineBreak/>
+                                    See the accompanying file LICENSE for details.
+                                </TextBlock>
+                            </StackPanel>
+                            
+                        </Border>
+
 
                     </StackPanel>
 
                     <ContentControl Grid.Row="1"
                                     Grid.Column="1"
+                                    Margin="20,20,0,0"
                                     Content="{Binding CurrentView}"/>
 
                 </Grid>

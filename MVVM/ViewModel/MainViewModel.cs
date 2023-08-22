@@ -1,6 +1,7 @@
 ﻿using AutomaticRepositoryCreator.Core;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace AutomaticRepositoryCreator.MVVM.ViewModel
         public RelayCommand HelpCommand { get; set; }
         public RelayCommand MinimizeCommand { get; set; }
         public RelayCommand CloseCommand { get; set; }
+        public RelayCommand GithubLinkCommand { get; set; }
+        public RelayCommand DiscordLinkCommand { get; set; }
         public NewRepoViewModel NewRepoVM { get; set; }
         public HomeViewModel HomeVM { get; set; }
         public ChangePathViewModel ChangePathVM { get; set; }
@@ -39,6 +42,8 @@ namespace AutomaticRepositoryCreator.MVVM.ViewModel
         {
             MinimizeCommand = new RelayCommand(Minimize);
             CloseCommand = new RelayCommand(Close);
+            GithubLinkCommand = new RelayCommand(GithubLink);
+            DiscordLinkCommand = new RelayCommand(DiscordLink);
 
             HomeVM = new HomeViewModel();
             NewRepoVM = new NewRepoViewModel();
@@ -74,6 +79,27 @@ namespace AutomaticRepositoryCreator.MVVM.ViewModel
         private void Close(object parameter)
         {
             Application.Current.Shutdown();
+        }
+
+        private void GithubLink(object parameter)
+        {
+            string githubLink = "https://github.com/Andrenal1n/";
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = githubLink,
+                UseShellExecute = true
+            });
+        }
+        private void DiscordLink(object parameter)
+        {
+            string discordLink = "https://discord.com/channels/1049617057286721546/1049617057286721549";
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = discordLink,
+                UseShellExecute = true
+            });
         }
 
     }

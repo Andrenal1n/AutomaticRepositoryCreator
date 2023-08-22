@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SVGImage, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SVGImage.3.0.0\lib\net47\SVGImage.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -86,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\MediaButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\MenuButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,6 +138,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,10 +151,36 @@
     <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\minimize.png" />
+    <Resource Include="Images\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\background.jpg" />
+    <Resource Include="Images\home-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\question-mark-round-line-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close-square-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\plus-square-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\github-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\discord-round-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\play-round-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

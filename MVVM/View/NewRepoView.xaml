@@ -5,21 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AutomaticRepositoryCreator.MVVM.View" xmlns:viewmodel="clr-namespace:AutomaticRepositoryCreator.MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:NewRepoViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="470" d:DesignWidth="555">
     
-    <Border Grid.Column="1"
-            Grid.Row="1"
-            Background="#74B9FF"
+    <Border Background="#00cec9"
             Opacity="0.5"
-            Height="450"
-            CornerRadius="15"
-            VerticalAlignment="Top"
-            Margin="20,20,0,0">
+            Height="470"
+            CornerRadius="5"
+            VerticalAlignment="Top">
 
         <Grid>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
@@ -27,57 +24,99 @@
                 <RowDefinition Height="75"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            
 
-            <Label Grid.Column="0"
-                   Grid.Row="0"
-                   Content="Repository Creator"
-                   FontFamily="Bahnschrift SemiBold"
-                   FontSize="32"
-                   Margin="20,20,20,0"/>
-
-            <StackPanel Grid.Column="0"
-                        Grid.Row="1" Cursor="">
-
-                <Label Content="Project name"
+            <TextBlock Grid.Column="0"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       Text="Repository Creator"
+                       FontFamily="Bahnschrift SemiBold"
+                       FontSize="32"
                        Margin="20,20,0,0"/>
 
-                <TextBox Width="200"
+            <StackPanel Grid.Column="0"
+                        Grid.Row="1">
+
+                <Label Content="Project name"
+                       Margin="20,20,0,0"
+                       FontFamily="Bahnschrift"
+                       FontSize="20"/>
+
+                <TextBox Width="250"
+                         Background="#dfe6e9"
+                         Opacity="0.9"
                          HorizontalAlignment="Left"
-                         Margin="20,0,0,0"
+                         Margin="25,0,0,0"
+                         FontFamily="Bahnschrift"
+                         FontSize="18"
+                         MaxLength="25"
                          Text="{Binding ProjectName}"/>
 
                 <Label Content="Project description"
-                       Margin="20,0,0,0"/>
+                       Margin="20,20,0,0"
+                       FontFamily="Bahnschrift"
+                       FontSize="20"/>
 
-                <TextBox Width="200"
-                         Height="50"
+                <TextBox Width="250"
+                         Background="#dfe6e9"
+                         Opacity="0.9"
+                         Height="100"
                          TextWrapping="Wrap"
                          MaxLength="150"
                          HorizontalAlignment="Left"
-                         Margin="20,0,0,0"
+                         Margin="25,0,0,0"
+                         FontFamily="Bahnschrift"
+                         FontSize="16"
                          Text="{Binding ProjectDescription}"/>
 
                 <Label Content="Select project path"
-                       Margin="20,0,0,0"/>
+                       Margin="20,20,0,0"
+                       FontFamily="Bahnschrift"
+                       FontSize="20"/>
 
                 <StackPanel Orientation="Horizontal">
                     
                     <TextBox x:Name="PathTextBox" 
-                             Width="200"
+                             Width="220"
                              HorizontalAlignment="Left"
-                             Margin="20,0,0,0"
+                             Margin="25,0,0,0"
+                             Background="#dfe6e9"
+                             FontFamily="Bahnschrift"
+                             FontSize="20"
                              Text="{Binding SelectedFolderPath , Mode=TwoWay}"/>
-                    <Button Width="20"
+                    <Button Width="25"
+                            Height="25"
                             Margin="5,0,0,0"
-                            Command="{Binding OpenFolderCommand}"/>
+                            Background="Transparent"
+                            BorderThickness="1"
+                            Command="{Binding OpenFolderCommand}">
+                        <Button.Content>
+                            <Image Source="\Images\folder-icon.png"/>
+                        </Button.Content>
+                    </Button>
                 </StackPanel>
 
-                <Button Width="200"
+                
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1"
+                        Grid.Row="1">
+                <Button Width="100"
                         Height="30"
                         HorizontalAlignment="Left"
-                        Margin="20,20,0,0"
+                        Margin="20,45,0,0"
+                        Background="#dfe6e9"
                         Command="{Binding CreateProjectFolderCommand}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Create"/>
+                        <Image Source="\Images\play-round-icon.png"
+                               Height="20"
+                               Width="20"
+                               Margin="5,0,0,0"/>
+                    </StackPanel>
                     
+
                 </Button>
 
             </StackPanel>
