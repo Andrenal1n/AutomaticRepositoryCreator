@@ -1,7 +1,6 @@
 D:\Projects\C#\AutomaticRepositoryCreator\bin\Debug\AutomaticRepositoryCreator.exe.config
 D:\Projects\C#\AutomaticRepositoryCreator\bin\Debug\AutomaticRepositoryCreator.exe
 D:\Projects\C#\AutomaticRepositoryCreator\bin\Debug\AutomaticRepositoryCreator.pdb
-D:\Projects\C#\AutomaticRepositoryCreator\bin\Debug\SVGImage.dll
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.csproj.AssemblyReference.cache
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.csproj.SuggestedBindingRedirects.cache
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\Theme\MenuButtonTheme.baml
@@ -25,7 +24,6 @@ D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.g
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.Properties.Resources.resources
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.csproj.GenerateResource.cache
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.csproj.CoreCompileInputs.cache
-D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.csproj.CopyComplete
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.exe
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\AutomaticRepositoryCreator.pdb
 D:\Projects\C#\AutomaticRepositoryCreator\obj\Debug\Theme\MediaButtonTheme.baml
