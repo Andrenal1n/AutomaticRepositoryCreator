@@ -107,7 +107,7 @@
                         HorizontalAlignment="Left"
                         Margin="20,45,0,0"
                         Background="#dfe6e9"
-                        Command="{Binding CreateProjectFolderCommand}">
+                        Command="{Binding CreateRepoCommand}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Create"/>
                         <Image Source="\Images\play-round-icon.png"
